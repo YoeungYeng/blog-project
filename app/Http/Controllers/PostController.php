@@ -33,6 +33,11 @@ class PostController extends Controller
 
         return redirect()->route('posts.index');
     }
+    // show
+    public function show(Post $post)
+    {
+        return view('post.show', compact('post'));
+    }
     public function edit(Post $post)
     {
         // categories
